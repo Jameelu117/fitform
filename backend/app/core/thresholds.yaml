@@ -1,0 +1,79 @@
+squat:
+  # Joint-angle thresholds (degrees)
+  standing_knee_angle_min: 155     # above this = STANDING
+  descending_knee_angle: 145       # below this while standing -> DESCENDING
+  bottom_knee_angle_max: 115       # below this = BOTTOM
+  ascending_knee_angle: 130        # above this while at bottom -> ASCENDING
+  good_depth_angle: 105            # knee angle considered "good depth"
+
+  # Timing / debouncesquat:
+  standing_knee_angle_min: 155
+  descending_knee_angle: 145
+  bottom_knee_angle_max: 115
+  ascending_knee_angle: 130
+  good_depth_angle: 105
+  min_rep_time_ms: 700
+  knee_alignment_tolerance: 0.10
+  torso_lean_max_deg: 35
+  score_start: 100
+  penalty_knee_alignment: 12
+  penalty_shallow_depth: 10
+  penalty_torso_lean: 10
+
+pushup:
+  top_elbow_angle_min: 155
+  descending_elbow_angle: 145
+  bottom_elbow_angle_max: 95
+  ascending_elbow_angle: 110
+  good_depth_angle: 100
+  min_rep_time_ms: 600
+  hip_sag_tolerance_deg: 20
+  score_start: 100
+  penalty_hip_sag: 12
+  penalty_shallow_depth: 10
+
+lunge:
+  standing_knee_angle_min: 160
+  descending_knee_angle: 150
+  bottom_knee_angle_max: 100
+  ascending_knee_angle: 120
+  good_depth_angle: 100
+  min_rep_time_ms: 700
+  knee_over_toe_tolerance: 0.12
+  torso_lean_max_deg: 25
+  score_start: 100
+  penalty_knee_over_toe: 12
+  penalty_shallow_depth: 10
+  penalty_torso_lean: 10
+
+curl:
+  extended_elbow_angle_min: 150
+  curling_elbow_angle: 140
+  flexed_elbow_angle_max: 60
+  lowering_elbow_angle: 80
+  good_flex_angle: 50
+  min_rep_time_ms: 500
+  elbow_drift_tolerance: 0.08
+  torso_swing_max_deg: 15
+  score_start: 100
+  penalty_elbow_drift: 12
+  penalty_partial_range: 10
+  penalty_swing: 10
+
+jumping_jack:
+  closed_spread_max: 0.12
+  open_spread_min: 0.35
+  min_rep_time_ms: 500
+  score_start: 100
+  penalty_async: 10
+  min_rep_time_ms: 700             # ignore reps faster than this (noise)
+
+  # Form checks
+  knee_alignment_tolerance: 0.10   # |knee_x - ankle_x| normalized tolerance
+  torso_lean_max_deg: 35           # max forward lean of torso vs vertical
+
+  # Scoring
+  score_start: 100
+  penalty_knee_alignment: 12
+  penalty_shallow_depth: 10
+  penalty_torso_lean: 10
